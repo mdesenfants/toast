@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS Users
+(
+	name TEXT UNIQUE,
+	apikey TEXT
+);
+
+CREATE TABLE IF NOT EXISTS Records
+(
+	name TEXT NOT NULL,
+	start TEXT NOT NULL,
+	finish TEXT NOT NULL,
+	FOREIGN KEY user REFERENCES Users(name)
+);
+
+INSERT INTO Users (name, apikey) VALUES ('Adam', '5TKM3A9I44YRV6UMR0ZS');
