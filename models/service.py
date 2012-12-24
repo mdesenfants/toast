@@ -74,6 +74,6 @@ class service(object):
 				else:
 					row = self.db.execute("select rowid from records order by start desc, finish desc limit 1").fetchone()
 					id = row['rowid']
-					self.db.execute("update records set finish = '" + timing + "' where rowid = " + id)
-			js = response.response(response.SUCCESS, {"toasting": toasting, "effective:": timing}).json()
+					self.db.execute("update records set finish = '" + str(timing) + "' where rowid = " + str(id))
+			js = response.response(response.SUCCESS, {"toasting": toasting, "effective": str(timing)}).json()
 		return js

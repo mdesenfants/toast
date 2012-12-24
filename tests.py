@@ -51,15 +51,13 @@ class ServiceTests(unittest.TestCase):
 	
 	def test_on_off(self):
 		self.setup()
-		response = json.loads(self.service.on("5TKM3A9I44YRV6UMR0ZS"))
-		print response
-		time = response["data"]["effective"]
-		print time
-		expected = response.response(response.STATUS, {'status': True, 'count': 2, 'last': time, 'started': 200}).json()
+		onRequest = json.loads(self.service.on("5TKM3A9I44YRV6UMR0ZS"))
+		time = onRequest["data"]["effective"]
+		expected = response.response(response.STATUS, {'status': True, 'count': 3, 'last': time, 'started': 200}).json()
 		time = json.loads(self.service.off("5TKM3A9I44YRV6UMR0ZS"))["data"]["effective"]
-		expected = response.response(response.STATUS, {'status': False, 'count': 2, 'last': time, 'started': 200}).json()
+		expected = response.response(response.STATUS, {'status': False, 'count': 3, 'last': time, 'started': 200}).json()
 		self.assertEqual(self.service.get(), expected)
-		
+
 	def test_invalid_key(self):
 		self.setup()
 
