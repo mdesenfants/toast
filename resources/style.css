@@ -1,24 +1,26 @@
-* { margin: 0; padding: 0; border: none; outline: none; }
-
-hr
-{
-	border-top: solid gray 1px;
-	margin-top: 50px;
-	margin-bottom: 50px;
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
 }
 
-div.main
-{
-	width: 50%;
-	height: 50%;
-	margin-left: 25%;
-	font-size: 42px;
-	text-align: center;
-	margin-top: 10%;
+hr {
+    border-top: solid gray 1px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-div.main p
-{
-	padding-top: 25px;
-	padding-bottom: 25px;
+div.main {
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+    font-size: 42px;
+    text-align: center;
+    margin-top: 10%;
+}
+
+div.main p {
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
